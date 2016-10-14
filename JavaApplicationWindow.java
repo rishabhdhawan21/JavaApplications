@@ -11,7 +11,7 @@ public class JavaApplicationWindow implements ActionListener {
     JLabel heading;//main heading
     JPanel one,two;//panel in frame
     JLabel welcome;//the welcome label
-    JButton b1,b2,b3,b4,b5,b6;//buttons for applications
+    JButton b1,b2,b3,b4,b5,b6,b7,b8;//buttons for applications
     
     public void memory()//dynamic memory allocation
     {
@@ -32,6 +32,8 @@ public class JavaApplicationWindow implements ActionListener {
         b4=new JButton(img4);
         b5=new JButton(img5);
         b6=new JButton(img6);
+        b7=new JButton();
+        b8=new JButton();
         
     }
     public void properties()//to set the properties of components
@@ -62,6 +64,8 @@ public class JavaApplicationWindow implements ActionListener {
         b6.setBounds(60, 425, 250, 250);
         b5.setBounds(340, 425, 250, 250);
         b4.setBounds(625, 425, 250, 250);
+        b7.setBounds(915, 150, 250, 250);
+        b8.setBounds(915, 425, 250, 250);
     }
     public void format()//formatting of components
     {
@@ -85,6 +89,8 @@ public class JavaApplicationWindow implements ActionListener {
         one.add(b4);
         one.add(b5);
         one.add(b6);
+        one.add(b7);
+        one.add(b8);
     }
     public void actionPerformed(ActionEvent e)
     {

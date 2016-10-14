@@ -178,10 +178,10 @@ public class QuizApp implements ActionListener{
             b3.setText(""+options[k][operation+1]);
             b4.setText(""+options[k][operation+2]);
             b5.setText(""+options[k][operation+3]);
-            b2.setForeground(Color.BLACK);
-            b3.setForeground(Color.BLACK);
-            b4.setForeground(Color.BLACK);
-            b5.setForeground(Color.BLACK);
+            b2.setForeground(Color.BLUE);
+            b3.setForeground(Color.BLUE);
+            b4.setForeground(Color.BLUE);
+            b5.setForeground(Color.BLUE);
             g1.clearSelection();
             l1.setText(""+questions[k][0]);
             

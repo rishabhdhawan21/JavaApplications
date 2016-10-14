@@ -13,7 +13,7 @@ public class WordCalculator implements ActionListener{
     JPanel p1;
     JLabel l1,l2,l3;
     JTextArea t1,t2,t3;
-    JButton b1;
+    JButton b1,b2;
     public void init()//memory allocation of the components declared earlier
     {
         master=new JFrame();
@@ -26,7 +26,7 @@ public class WordCalculator implements ActionListener{
         b1=new JButton("Submit");
         t2=new JTextArea();
         t3=new JTextArea();
-        
+        b2=new JButton("Reset");
     }
     public void properties()//set the properties of the frame
     {
@@ -43,13 +43,15 @@ public class WordCalculator implements ActionListener{
         t2.setBorder(border);
         t3.setBorder(border);
         b1.addActionListener(this);
+        b2.addActionListener(this);
         master.setTitle("****Word Count Tool****");
     }
     public void positioning()//set the position of the components in frame
     {
         l1.setBounds(65, 30, 550, 50);
         t1.setBounds(38, 90, 550, 275);
-        b1.setBounds(265, 400, 90, 40);
+        b1.setBounds(220, 400, 90, 40);
+        b2.setBounds(335, 400, 90, 40);
         l2.setBounds(38, 470, 230, 30);
         l3.setBounds(38,530, 230, 30);
         t2.setBounds(280, 470, 70, 30);
@@ -61,7 +63,7 @@ public class WordCalculator implements ActionListener{
     {
         l1.setFont(new Font("ALGERIAN",Font.BOLD,30));
         l1.setForeground(Color.BLUE);
-        t1.setFont(new Font("ALGERIAN",Font.ITALIC,15));
+        t1.setFont(new Font("ALGERIAN",Font.ITALIC,17));
         t1.setForeground(Color.RED);
         l2.setFont(new Font("ALGERIAN",Font.BOLD,15));
         l2.setForeground(Color.BLUE);
@@ -69,6 +71,8 @@ public class WordCalculator implements ActionListener{
         l3.setForeground(Color.BLUE);
         t2.setFont(new Font("ALGERIAN",Font.BOLD,15));
         t3.setFont(new Font("ALGERIAN",Font.BOLD,15));
+        b1.setFont(new Font("Verdana",Font.BOLD,12));
+        b2.setFont(new Font("Verdana",Font.BOLD,12));
     }
     public void add()//adding components into the panel
     {
@@ -79,6 +83,7 @@ public class WordCalculator implements ActionListener{
        p1.add(l3);
        p1.add(t2);
        p1.add(t3);
+       p1.add(b2);
      
     }
         public void actionPerformed(ActionEvent e)
@@ -100,6 +105,12 @@ public class WordCalculator implements ActionListener{
         count2++;}
     t3.setText(""+count2);
 }
+     if(e.getSource()==b2)
+     {
+         t1.setText(null);
+         t2.setText(null);
+         t3.setText(null);
+     }
          
 }
     public  void callWordCalculator()
