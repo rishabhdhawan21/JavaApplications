@@ -26,13 +26,14 @@ public class JavaApplicationWindow implements ActionListener {
         ImageIcon img4 = new ImageIcon("C:\\Users\\Dell\\Desktop\\JApps Project\\JApps\\bin\\com\\javatpoint\\wct.jpg");
         ImageIcon img5 = new ImageIcon("C:\\Users\\Dell\\Downloads\\icon128-2x.png");
         ImageIcon img6 = new ImageIcon("C:\\Users\\Dell\\Downloads\\biz.mtoy.blockpuzzle.revolution.png");
+        ImageIcon img7 = new ImageIcon("C:\\Users\\Dell\\Downloads\\unnamed (1).png");
         b1=new JButton(img1);
         b2=new JButton(img2);
         b3=new JButton(img3);
         b4=new JButton(img4);
         b5=new JButton(img5);
         b6=new JButton(img6);
-        b7=new JButton();
+        b7=new JButton(img7);
         b8=new JButton();
         
     }
@@ -41,7 +42,7 @@ public class JavaApplicationWindow implements ActionListener {
         
         Border border = BorderFactory.createLineBorder(Color.RED,10);
         one.setBorder(border);
-        master.setSize(1300, 750);
+        master.setSize(1250, 750);
         master.setVisible(true);
         master.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         one.setSize(1200, 650);
@@ -69,6 +70,7 @@ public class JavaApplicationWindow implements ActionListener {
     }
     public void format()//formatting of components
     {
+        b7.setBackground(Color.BLACK);
         b2.setBackground(Color.BLACK);
         b4.setBackground(Color.BLACK);
         b1.setBackground(Color.BLACK);
