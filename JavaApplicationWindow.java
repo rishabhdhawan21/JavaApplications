@@ -54,6 +54,8 @@ public class JavaApplicationWindow implements ActionListener {
         b3.addActionListener(this);
         b6.addActionListener(this);
         b2.addActionListener(this);
+        b7.addActionListener(this);
+
     }
     public void setCoordinates()//to set the position of components
     {
@@ -126,7 +128,13 @@ public class JavaApplicationWindow implements ActionListener {
             AdressBookWindow obj=new AdressBookWindow();
             obj.callAdressBookWindow();
         }
-    }
+        if(e.getSource()==b7)
+        {
+            QRCodeGenerator obj=new QRCodeGenerator();
+            obj.callQRCodeGenerator();
+        }
+
+            }
 
     public static void main(String[] args)// the main function 
     {
