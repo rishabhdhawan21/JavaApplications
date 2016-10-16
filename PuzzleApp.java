@@ -36,7 +36,6 @@ public void properties()
     Border border1 = BorderFactory.createLineBorder(Color.BLACK,10);
     master.setVisible(true);
     master.setSize(600, 600);
-    master.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     master.add(p1);
     p1.setSize(570, 570);
     p1.setLayout(null);
