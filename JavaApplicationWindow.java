@@ -27,6 +27,7 @@ public class JavaApplicationWindow implements ActionListener {
         ImageIcon img5 = new ImageIcon("C:\\Users\\Dell\\Downloads\\icon128-2x.png");
         ImageIcon img6 = new ImageIcon("C:\\Users\\Dell\\Downloads\\biz.mtoy.blockpuzzle.revolution.png");
         ImageIcon img7 = new ImageIcon("C:\\Users\\Dell\\Downloads\\unnamed (1).png");
+        ImageIcon img8 = new ImageIcon("C:\\Users\\Dell\\Downloads\\download (2).jpg");
         b1=new JButton(img1);
         b2=new JButton(img2);
         b3=new JButton(img3);
@@ -34,7 +35,7 @@ public class JavaApplicationWindow implements ActionListener {
         b5=new JButton(img5);
         b6=new JButton(img6);
         b7=new JButton(img7);
-        b8=new JButton();
+        b8=new JButton(img8);
         
     }
     public void properties()//to set the properties of components
@@ -55,6 +56,7 @@ public class JavaApplicationWindow implements ActionListener {
         b6.addActionListener(this);
         b2.addActionListener(this);
         b7.addActionListener(this);
+        b8.addActionListener(this);
 
     }
     public void setCoordinates()//to set the position of components
@@ -66,13 +68,14 @@ public class JavaApplicationWindow implements ActionListener {
         b3.setBounds(625, 150, 250, 250);
         b6.setBounds(60, 425, 250, 250);
         b5.setBounds(340, 425, 250, 250);
-        b4.setBounds(625, 425, 250, 250);
+        b4.setBounds(915, 425, 250, 250);
         b7.setBounds(915, 150, 250, 250);
-        b8.setBounds(915, 425, 250, 250);
+        b8.setBounds(625, 425, 250, 250);
     }
     public void format()//formatting of components
     {
         b7.setBackground(Color.BLACK);
+        b8.setBackground(Color.BLACK);
         b2.setBackground(Color.BLACK);
         b4.setBackground(Color.BLACK);
         b1.setBackground(Color.BLACK);
@@ -133,6 +136,11 @@ public class JavaApplicationWindow implements ActionListener {
             QRCodeGenerator obj=new QRCodeGenerator();
             obj.callQRCodeGenerator();
         }
+         if(e.getSource()==b8)
+         {
+             ExamResult obj=new  ExamResult();
+             obj.callExamResult();
+         }
 
             }
 

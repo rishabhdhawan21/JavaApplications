@@ -188,7 +188,7 @@ public class AdressBookWindow extends JComponent implements ActionListener {
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/rishabh",USER,PASS);
             stmt = conn.createStatement();
-            String sql="INSERT INTO contacts(Name,Phone_no,Email,Adress) VALUES(?,?,?,?)";
+            String sql="INSERT INTO contacts VALUES(?,?,?,?)";
             ps=conn.prepareStatement(sql);
             ps.setString(1,t1.getText());
             ps.setString(2,t2.getText());
